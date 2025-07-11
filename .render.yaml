@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: 7daypredict
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app15.py --server.port=8000 --server.enableCORS=false
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
